@@ -13,6 +13,8 @@ from telegram.ext import Updater, MessageHandler, CommandHandler, Filters, Callb
 
 Файл main.py - Пашина Ксения
 Файл dop.py - Павлова Елена 
+
+Для изучения использовалось видео: https://youtu.be/CiiBAWuPH5s
 """
 
 
