@@ -22,7 +22,12 @@ def get_keyboard_2():
 
 
 def keyboard_regulate(update: Update, context):
-    """Функция отвечает за реализацию выбора кнопки."""
+    """Функция отвечает за реализацию выбора кнопки.
+    
+    Функция принимает два заначения:
+    update - обновление, которое пришло с сервера
+    context - в этом объекте хранятся все важные данные бота
+    """
     callbacks = update.callback_query
     current_callback = callbacks.data
 
@@ -49,7 +54,12 @@ def keyboard_regulate(update: Update, context):
 
 def choose(update: Update, context, text):
     """Функция отвечает за выбор информации, который хочет получить пользоватьль в базе данных.
-    Функция реализует кнопки окончательного выбора."""
+    Функция реализует кнопки окончательного выбора.
+    
+    Функция принимает два заначения:
+    update - обновление, которое пришло с сервера
+    context - в этом объекте хранятся все важные данные бота.
+    """
     number = config.number
     f = True
 
@@ -109,7 +119,12 @@ def choose(update: Update, context, text):
 
 
 def check_surname(update: Update, context):
-    """Функуия реализует встроенную клавиатура в виде кнопок."""
+    """Функуия реализует встроенную клавиатура в виде кнопок.
+    
+    Функция принимает два заначения:
+    update - обновление, которое пришло с сервера
+    context - в этом объекте хранятся все важные данные бота.
+    """
     update.message.reply_text(
         text="Выбери, что хочешь узнать",
         reply_markup=ReplyKeyboardMarkup(get_keyboard(), one_time_keyboard=True)
